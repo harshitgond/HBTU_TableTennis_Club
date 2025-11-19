@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HBTU TT CLUB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;      /* yaha change kiya */
+      overflow-y: auto;       /* scroll allow */
+    }
+
+    /* ====== 1. WELCOME SCREEN ====== */
+    .welcome-screen {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #000;
+      animation: fadeInOut 3s ease forwards;
+      z-index: 10;
+    }
+
+    .welcome-text {
+      font-size: 2.2rem;
+      letter-spacing: 0.25rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @keyframes fadeInOut {
+      0%   { opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* ====== 2. MAIN SCREEN ====== */
+    .main-screen {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s ease;
+      position: relative;
+      z-index: 1;
+      padding: 40px 0 80px;
+    }
+
+    .main-screen.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .main-title {
+      font-size: 1.8rem;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .banner-wrapper {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #000;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      border: 1px solid #222;
+    }
+
+    .banner-wrapper img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      letter-spacing: 3px;
+      margin: 60px 0 20px 0;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .section-text {
+      font-size: 26px;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+.glimpse-grid {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 per row */
+    gap: 30px;
+}
+
+.glimpse-img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+ }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Pehle yeh screen 3 sec ke liye -->
+  <div class="welcome-screen">
+    <div class="welcome-text">
+      HBTU TABLE TENNIS CLUB<br>WELCOMES YOU
+    </div>
+  </div>
+
+  <!-- 2. Uske baad main interface -->
+  <div class="main-screen" id="mainScreen">
+    <h1 class="main-title">HBTU TABLE TENNIS CLUB WELCOMES YOU</h1>
+
+    <div class="banner-wrapper">
+      <!-- yaha tumhari Canva wali image -->
+      <!-- image ko tt.html ke same folder me rakho 
+           aur naam simple rakh lo jaise elite.png -->
+      <img src="C:\Users\Harshit Gond\Downloads\Elite 🏓 (1).png" alt="ELITE Club of HBTU">
+
+      <!-- ===================== DESCRIPTION SECTION ===================== -->
+      <h2 class="section-title">Description</h2>
+      <p class="section-text">
+        Racket Ran 2025 is coming — get ready for the biggest Table Tennis showdown of HBTU!
+      </p>
+          <!-- ===================== WHAT IS RACKET RAN ===================== -->
+
+    <div style="margin-top: 80px; text-align: center;">
+
+      <h2 style="
+          font-size: 38px; 
+          letter-spacing: 3px; 
+          margin-bottom: 20px; 
+          text-transform: uppercase;">
+        What is Racket Ran?
+      </h2>
+
+      <p style="
+          font-size: 22px; 
+          max-width: 900px; 
+          margin: 0 auto; 
+          line-height: 1.7;">
+        Racket Ran ek inter–club Table Tennis tournament hai jisme HBTU ke 
+        players ek doosre ke against compete karte hain. 
+        Teams mixed hoti hain taaki sabko equal chance mile – seniors, juniors, 
+        boys aur girls sab ek hi platform par khelte hain.
+      </p>
+    </div>
+
+    <div style="
+        margin-top: 50px; 
+        max-width: 900px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        font-size: 20px; 
+        line-height: 1.8;">
+
+      <!-- FORMAT & TEAMS -->
+      <h3 style="
+          font-size: 26px; 
+          letter-spacing: 2px; 
+          text-transform: uppercase; 
+          margin-bottom: 12px; 
+          text-align: center;">
+        Format & Teams
+      </h3>
+
+      <ul style="list-style: none; padding-left: 0; text-align: left;">
+        <li>• Total <b>5 teams</b> participate karengi.</li>
+        <li>• Har team mein <b>3 boys</b> aur <b>2 girls</b> honge.</li>
+        <li>• Har match multiple events ka combination hoga (singles + doubles).</li>
+        <li>• Har event ka result team ke overall points mein add hoga.</li>
+      </ul>
+
+      <!-- MATCH EVENTS -->
+      <h3 style="
+          font-size: 26px; 
+          letter-spacing: 2px; 
+          text-transform: uppercase; 
+          margin: 30px 0 12px 0; 
+          text-align: center;">
+        Match Events
+      </h3>
+
+      <ul style="list-style: none; padding-left: 0; text-align: left;">
+        <li>• <b>Boys Singles</b> – 1 ladka.</li>
+        <li>• <b>Girls Singles</b> – 1 ladki.</li>
+        <li>• <b>Boys Doubles</b> – 2 boys ka pair.</li>
+        <li>• <b>Girls Doubles</b> – 2 girls ka pair.</li>
+        <li>• <b>Mixed Doubles</b> – 1 boy + 1 girl.</li>
+      </ul>
+
+      <!-- BASIC TT RULES -->
+      <h3 style="
+          font-size: 26px; 
+          letter-spacing: 2px; 
+          text-transform: uppercase; 
+          margin: 30px 0 12px 0; 
+          text-align: center;">
+        Basic Table Tennis Rules
+      </h3>
+
+      <ul style="list-style: none; padding-left: 0; text-align: left;">
+        <li>• Match generally <b>best of 5 games</b> hoga (pehle 3 games jeetne wala winner).</li>
+        <li>• Ek game <b>11 points</b> ka hota hai, aur jeetne ke liye <b>2 point ka lead</b> zaroori hai.</li>
+        <li>• Har player <b>2–2 points</b> ke liye serve karta hai, phir service change.</li>
+        <li>• Serve hamesha table par pehle apni side, phir opponent ki side bounce karega.</li>
+        <li>• Doubles mein serve <b>diagonally</b> (right se right) diya jata hai.</li>
+        <li>• Rally tab tak chalta hai jab tak ball net mein, bahar, ya ek bounce se zyada na ho jaye.</li>
+        <li>• Racket ke alawa body se table ko zor se move karna / haath rakhna allowed nahi.</li>
+      </ul>
+
+    </div>
+    <!-- ===================== PAST GLIMPSES ===================== -->
+
+
+      <!-- ===================== PAST GLIMPSES ===================== -->
+      <!-- ===================== PAST GLIMPSES ===================== -->
+<h2 class="glimpse-title">Past Glimpses of Racket Ran</h2>
+
+<div class="glimpse-grid">
+
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.42.01_dbe7e8ce.jpg" class="glimpse-img">
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.42.00_1499e9d5.jpg" class="glimpse-img">
+
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.47.57_78ac3928.jpg" class="glimpse-img">
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.48.05_55eaad2f.jpg" class="glimpse-img">
+
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.42.02_cc0761ab.jpg" class="glimpse-img">
+  <img src="C:\Users\Harshit Gond\Downloads\WhatsApp Image 2025-11-19 at 11.42.38_e097382f.jpg" class="glimpse-img">
+
+</div>
+
+    </div>
+  </div>
+
+  <script>
+    // Page load hote hi 3 sec ke baad welcome hata ke main screen dikhao
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        const welcome = document.querySelector(".welcome-screen");
+        const main = document.getElementById("mainScreen");
+
+        if (welcome) welcome.style.display = "none";
+        if (main) main.classList.add("show");
+      }, 3000); // 3000 ms = 3 seconds
+    });
+  </script>
+</body>
+</html>
